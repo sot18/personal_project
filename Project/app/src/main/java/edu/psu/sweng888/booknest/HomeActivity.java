@@ -91,4 +91,10 @@ public class HomeActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> Log.e("Firestore", "Error fetching books", e));
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        fetchBooks();  // Fetch the books again every time you return to the activity
+    }
 }
