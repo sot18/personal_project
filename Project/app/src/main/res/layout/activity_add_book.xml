@@ -3,45 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp"
+    android:background="#f1f8ff"> <!-- Soft light blue background -->
 
-
-
+    <!-- Book Title -->
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Book Title" />
+        android:hint="Book Title"
+        android:textColor="#333"
+        android:backgroundTint="#009688"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Author -->
     <EditText
         android:id="@+id/editTextAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Author" />
+        android:hint="Author"
+        android:textColor="#333"
+        android:backgroundTint="#009688"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Price -->
     <EditText
         android:id="@+id/editTextPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Price"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textColor="#333"
+        android:backgroundTint="#009688"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Condition Spinner -->
     <Spinner
         android:id="@+id/spinnerCondition"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <!-- Image URL EditText -->
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#009688"/>
+
+    <!-- Image URL -->
     <EditText
         android:id="@+id/editTextImageUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Image URL (Optional)"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        android:textColor="#333"
+        android:backgroundTint="#009688"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Add Book Button -->
     <Button
         android:id="@+id/buttonAddBook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Book" />
-
+        android:text="Add Book"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#3F51B5"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

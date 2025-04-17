@@ -22,6 +22,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     private List<Book> bookListFull;
     private OnBookClickListener onBookClickListener;
 
+
     // Listener interface
     public interface OnBookClickListener {
         void onBookClick(Book book);
@@ -43,10 +44,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
+        // Get the book at the current position
         Book book = bookList.get(position);
 
+        // Set the book title
         holder.textTitle.setText(book.getTitle());
 
+        // Load the book's cover image using Glide
         if (book.getImageUrl() != null && !book.getImageUrl().isEmpty()) {
             Glide.with(holder.itemView.getContext())
                     .load(book.getImageUrl())
@@ -55,6 +59,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             holder.imageViewBookCover.setImageResource(R.drawable.placeholder_image);
         }
 
+        // Set up the click listener for the book item
         holder.itemView.setOnClickListener(v -> {
             if (onBookClickListener != null) {
                 onBookClickListener.onBookClick(book);
@@ -62,13 +67,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         });
     }
 
+
     @Override
     public int getItemCount() {
         return bookList.size();
     }
 
     public class BookViewHolder extends RecyclerView.ViewHolder {
-        TextView textTitle;
+        TextView textTitle, textAuthor;
         ImageView imageViewBookCover;
 
         public BookViewHolder(@NonNull View itemView) {

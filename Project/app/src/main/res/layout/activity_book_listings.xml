@@ -1,60 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:background="#b8e1ff">
 
-    <!-- ImageView to display the book cover -->
-    <ImageView
-        android:id="@+id/imageViewBook"
-        android:layout_width="200dp"
-        android:layout_height="300dp"
-        android:src="@drawable/placeholder_image"
-        android:contentDescription="Book Cover"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- TextView to display the book title -->
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book Title"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <!-- TextView to display the book author -->
-    <TextView
-        android:id="@+id/textViewAuthor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="by Author"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        <!-- Fancy Book Cover -->
+        <ImageView
+            android:id="@+id/imageViewBook"
+            android:layout_width="220dp"
+            android:layout_height="320dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Book Cover"
+            android:src="@drawable/placeholder_image"/>
 
-    <!-- TextView to display the book price -->
-    <TextView
-        android:id="@+id/textViewPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$0.00"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Title"
+            android:textSize="22sp"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
 
-    <!-- Rent and Buy buttons -->
-    <Button
-        android:id="@+id/buttonRent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rent"
-        android:layout_marginBottom="8dp"/>
+        <!-- Author -->
+        <TextView
+            android:id="@+id/textViewAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Author"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp" />
 
-    <Button
-        android:id="@+id/buttonBuy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy"/>
+        <!-- Price -->
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="20sp"
+            android:textColor="#008080"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
-</LinearLayout>
+        <!-- Rent Button -->
+        <Button
+            android:id="@+id/buttonRent"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Rent"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#009688"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Buy Button -->
+        <Button
+            android:id="@+id/buttonBuy"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Buy"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#3F51B5" />
+
+    </LinearLayout>
+</ScrollView>
